@@ -13,16 +13,15 @@
   position: relative;
 }
 .sideBar__menu i {
-  font-size: 24px;
+  font-size: 2.4rem;
   width: 24px;
   height: 24px;
-  /* background-color: antiquewhite; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .sideBar__menu span {
-  font-size: 16px;
+  font-size: 1.6rem;
   align-items: center;
 }
 .sideBar__item {
@@ -34,7 +33,6 @@
 }
 .sideBar__menu a {
   color: var(--sidebar-default);
-  /* transition: color 0.3s ease-in-out; */
   display: flex;
   align-items: center;
   gap: 10px;

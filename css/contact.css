@@ -22,14 +22,16 @@
   justify-content: center;
 }
 .contact-wrap ul li h2 {
-  font-size: 32px;
+  font-size: 3.2rem;
+}
+.contact-wrap ul li p {
+  font-size: 1.6rem;
 }
 .myinfo {
   position: relative;
 }
 .myinfo ul {
   position: relative;
-  /* top: -50px; */
   display: flex;
   justify-content: center;
   background-color: var(--info-wrap);
@@ -47,7 +49,7 @@
 }
 .myinfo ul li p {
   text-align: center;
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 .myinfo ul li img {
   width: 300px;
@@ -62,7 +64,7 @@
 .info-wrap ul li {
   display: flex;
   justify-content: center;
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 .info-wrap ul li a {
   color: var(--color);
