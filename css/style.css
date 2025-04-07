@@ -1,0 +1,127 @@
+/* 1599px 이하 */
+@media screen and (max-width: 1599px) {
+  .My-portfolio {
+    width: 100%;
+    padding: 40px;
+  }
+  .tag-wrap {
+    width: 100%;
+    padding: 10px;
+  }
+  .card-wrap {
+    width: 100%;
+  }
+  .cont {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 1199px 이하 */
+@media screen and (max-width: 1199px) {
+  .side-bar {
+    width: 200px;
+    padding: 20px;
+  }
+  .header {
+    left: 200px;
+    width: calc(100% - 200px);
+  }
+  .body-wrap {
+    left: 200px;
+    width: calc(100% - 200px);
+  }
+  .cont {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 899px 이하 */
+@media screen and (max-width: 899px) {
+  .side-bar {
+    display: none;
+  }
+  .header {
+    left: 0;
+    width: 100%;
+  }
+  .body-wrap {
+    left: 0;
+    width: 100%;
+  }
+  .My-portfolio {
+    padding: 30px;
+  }
+  .cont {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 679px 이하 */
+@media screen and (max-width: 679px) {
+  .My-portfolio {
+    padding: 20px;
+  }
+  .tag-wrap h2 {
+    font-size: 32px;
+  }
+  .tag h5 {
+    font-size: 18px;
+  }
+  .cont {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card {
+    width: 100%;
+  }
+  .thumbnail {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* 480px 이하 */
+@media screen and (max-width: 480px) {
+  .header {
+    height: 50px;
+    padding: 5px 10px;
+  }
+  .toggle-body {
+    gap: 5px;
+  }
+  .toggle-body i {
+    font-size: 20px;
+  }
+  .My-portfolio {
+    padding: 10px;
+  }
+  .tag h5 {
+    font-size: 16px;
+  }
+  .tag-list li a {
+    font-size: 14px;
+    padding: 3px 6px;
+  }
+  .cont {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .text-warp {
+    width: 100%;
+  }
+  .text-warp span {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .contact-info {
+    flex-direction: column;
+    height: auto;
+  }
+  .myinfo ul {
+    flex-direction: column;
+  }
+  .myinfo ul li {
+    width: 100%;
+    height: auto;
+  }
+}

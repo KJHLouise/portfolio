@@ -1,0 +1,11 @@
+/* .img-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+} */
+.img-slide img {
+  position: relative;
+  width: 1667px;
+  height: 600px;
+  object-fit: cover;
+}
