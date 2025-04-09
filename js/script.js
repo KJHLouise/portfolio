@@ -168,9 +168,23 @@ window.addEventListener("load", () => {
   });
 
   // 페이지네이션
-  const pagination = document.getElementById("pagination");
-  const cardsPerPage = 12;
+  let pagination = document.getElementById("pagination");
+  const cardsPerPage = getCardsPerPage();
   let currentPage = 1;
+
+  function getCardsPerPage() {
+    const width = window.innerWidth;
+
+    if (width <= 480) {
+      return 4;
+    } else if (width <= 679) {
+      return 6;
+    } else if (width <= 1199) {
+      return 9;
+    } else {
+      return 12; // 기본 (1200px 이상일 때)
+    }
+  }
 
   function showPage(page) {
     let start = (page - 1) * cardsPerPage;
@@ -181,10 +195,13 @@ window.addEventListener("load", () => {
     });
 
     document.querySelectorAll(".number a").forEach((btn) => btn.classList.remove("active"));
-    document.getElementById(`page-${page}`).classList.add("active");
+    const currentBtn = document.getElementById(`page-${page}`);
+    currentBtn?.classList.add("active");
+    // document.getElementById(`page-${page}`).classList.add("active");
   }
 
   function setupPagination() {
+    pagination.innerHTML = "";
     let pageCount = Math.ceil(cards.length / cardsPerPage);
     for (let i = 1; i <= pageCount; i++) {
       let li = document.createElement("li");
@@ -201,9 +218,19 @@ window.addEventListener("load", () => {
       pagination.appendChild(li);
     }
   }
-
+  // 초기 실행
   setupPagination();
   showPage(currentPage);
+
+  // 화면 크기 변경 시 cardPerPage 재설정
+  window.addEventListener("resize", () => {
+    const newCardsPerPage = getCardsPerPage();
+    if (newCardsPerPage !== cardsPerPage) {
+      cardsPerPage = newCardsPerPage;
+      setupPagination();
+      showPage(1); // 첫 페이지로 초기화 (선택사항)
+    }
+  });
 
   // img-slide
   const slideList = new Swiper(".slide-list", {

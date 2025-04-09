@@ -29,7 +29,6 @@
   margin: 0 0 35px;
   display: flex;
   justify-content: flex-start;
-  gap: 14px;
 }
 .sideBar__menu a {
   color: var(--sidebar-default);

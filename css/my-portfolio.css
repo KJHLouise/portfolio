@@ -1,15 +1,17 @@
 .My-portfolio {
   position: relative;
   display: grid;
-  width: 1667px;
+  justify-content: center;
+  width: 100%;
   height: auto;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   gap: 24px;
   padding: 50px 120px;
+  overflow-x: hidden;
 }
 .tag-wrap {
   display: grid;
-  width: 1547px;
+  width: 100%;
   gap: 26px;
   padding: 10px 30px;
 }
@@ -44,25 +46,23 @@
   border-radius: 8px;
   font-size: 1.6rem;
   color: var(--color);
-  display: block;
 }
 .card-wrap {
   position: relative;
+  width: 100%;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 24px;
-  width: 1427px;
-  height: auto;
-  min-height: 1284px; /* ✅ 최소 높이를 12개 기준으로 고정 */
-  align-content: flex-start; /* ✅ 줄이 위쪽에서부터 쌓이도록 정렬 */
+  gap: 24px 30px;
+  margin-top: 25px;
+  min-height: 1200px; /* ✅ 최소 높이를 12개 기준으로 고정 */
+  align-content: flex-start;
 }
 .card {
   position: relative;
-  width: calc(25% - 24px);
-  height: 412px;
-  flex: 1 1 calc(25% - 24px);
+  width: 20%;
+  padding: 10px;
   box-sizing: border-box;
-  padding: 16px;
   transition: opacity 0.5s ease, transform 0.5s ease;
   opacity: 1;
   transform: translateY(0);
@@ -76,7 +76,7 @@
 .thumbnail {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 6 / 5;
   overflow: hidden;
   height: auto;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -99,6 +99,10 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   transform: scale(110%);
 }
+.thumbnail a {
+  width: 100%;
+  height: 100%;
+}
 .thumbnail img {
   width: 100%;
   height: 100%;
@@ -108,7 +112,6 @@
   position: relative;
   width: 100%;
   height: 20px;
-  margin-bottom: 12px;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -153,8 +156,7 @@
 }
 .number {
   position: relative;
-  width: 1427px;
-  padding-top: 50px;
+  width: 100%;
 }
 .number ul {
   display: flex;

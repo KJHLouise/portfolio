@@ -1,142 +1,234 @@
 /* 1599px 이하 */
 @media screen and (max-width: 1599px) {
-  .My-portfolio {
-    width: 100%;
-    padding: 50px 60px;
+  .warp {
+    height: 2840px;
   }
-
-  .tag-wrap {
-    width: 100%;
-    padding: 10px 20px;
+  #sideBar {
+    width: 250px;
   }
-
-  .card-wrap {
-    width: 100%;
-    justify-content: space-between;
+  .header {
+    left: 250px;
+    width: calc(100% - 250px);
   }
-
+  .body-wrap {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+  }
   .card {
-    width: calc(33.33% - 24px);
-    flex: 1 1 calc(33.33% - 24px);
+    width: 20%;
   }
-
-  .thumbnail,
-  .text-wrap {
-    width: 100%;
+  .img-slide img {
+    height: 500px;
+    object-fit: cover;
   }
 }
 
 /* 1199px 이하 */
 @media screen and (max-width: 1199px) {
+  .warp {
+    height: 2500px;
+  }
   #sideBar {
-    width: 200px;
-    padding: 24px 10px;
-  }
-
-  .header {
-    left: 200px;
-    width: calc(100% - 200px);
-  }
-
-  .body-wrap {
-    margin-left: 200px;
-    width: calc(100% - 200px);
-  }
-
-  .card {
-    width: calc(50% - 24px);
-    flex: 1 1 calc(50% - 24px);
-  }
-}
-
-/* 899px 이하 */
-@media screen and (max-width: 899px) {
-  #sideBar {
-    display: none;
-  }
-
-  .header {
-    left: 0;
-    width: 100%;
-  }
-
-  .body-wrap {
-    margin-left: 0;
-    width: 100%;
-  }
-
-  .card {
-    width: 100%;
-    flex: 1 1 100%;
-  }
-
-  #search input {
     width: 150px;
   }
-
-  #search input:focus {
-    width: 200px;
+  .sideBar__menu span {
+    font-size: 1.2rem;
   }
-
-  .tag h5 {
-    font-size: 2rem;
+  .sideBar__menu i {
+    font-size: 1.6rem;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-
-  .tag-list li a {
-    font-size: 1.4rem;
+  .sideBar__item {
+    margin: 0 0 20px;
   }
-}
-
-/* 679px 이하 */
-@media screen and (max-width: 679px) {
-  .card {
-    width: 100%;
-    flex: 1 1 100%;
+  .header {
+    left: 150px;
+    width: calc(100% - 150px);
   }
-
-  .My-portfolio,
+  .body-wrap {
+    margin-left: 150px;
+    width: calc(100% - 150px);
+  }
+  .img-slide img {
+    height: 400px;
+    object-fit: cover;
+  }
   .tag-wrap {
-    padding: 30px 20px;
+    width: 850px;
   }
-
-  .thumbnail img {
-    width: 100%;
-    height: auto;
+  .tag-wrap h2 {
+    font-size: 3rem;
   }
-
+  .tag {
+    grid-template-columns: 100px auto;
+  }
+  .tag h5 {
+    font-size: 1.6rem;
+  }
+  .tag-list li a {
+    padding: 5px 8px;
+    font-size: 1.2rem;
+  }
+  .card-wrap {
+    min-height: 965px;
+    gap: 16px;
+  }
+  .card-tag .tag-list {
+    font-size: 1rem;
+  }
+  .card {
+    width: 25%;
+  }
   .text-wrap span {
     font-size: 1.6rem;
   }
-
-  .tag-wrap h2 {
-    font-size: 3.2rem;
+  .text-wrap p {
+    font-size: 1.2rem;
   }
-
   .contact-info {
-    flex-direction: column;
-    height: auto;
-    padding: 20px;
+    height: 655px;
   }
-
-  .myinfo ul {
-    flex-direction: column;
-    transform: none;
+  .contact-wrap ul li h2 {
+    font-size: 3rem;
   }
-
+  .contact-wrap ul li p {
+    font-size: 1.6rem;
+  }
+  .myinfo {
+    width: 800px;
+    height: 300px;
+  }
   .myinfo ul li {
-    width: 100%;
-    height: auto;
+    height: 300px;
   }
-
   .myinfo ul li img {
     width: 200px;
     height: 200px;
   }
 }
 
+/* 899px 이하 */
+@media screen and (max-width: 899px) {
+  .warp {
+    height: 2400px;
+  }
+  #sideBar {
+    display: none;
+  }
+  .header {
+    width: 100%;
+    left: 0;
+  }
+  .body-wrap {
+    width: 100%;
+    margin-left: 0;
+  }
+  .img-slide img {
+    height: 400px;
+    object-fit: cover;
+  }
+  .myinfo {
+    width: 899px;
+    height: 300px;
+  }
+}
+
+/* 679px 이하 */
+@media screen and (max-width: 679px) {
+  .warp {
+    height: 2390px;
+  }
+  .header {
+    height: 50px;
+  }
+  .body-wrap {
+    top: 50px;
+  }
+  #search input {
+    padding: 5px 15px 5px 35px;
+  }
+  .toggle-body i {
+    font-size: 1.6rem;
+  }
+  #toggle-wrap {
+    width: 40px;
+    height: 22px;
+  }
+  #toggle-wrap .toggle {
+    width: 18px;
+    height: 18px;
+  }
+  .logo i {
+    font-size: 2rem;
+  }
+  .logo a {
+    font-size: 1.2rem;
+  }
+  .img-slide img {
+    height: 300px;
+    object-fit: cover;
+  }
+  .tag-wrap {
+    width: 550px;
+  }
+  .card-wrap {
+    min-height: 675px;
+    gap: 35px;
+  }
+  .card {
+    width: 33%;
+  }
+  .contact-info {
+    height: 600px;
+  }
+  .myinfo {
+    width: 679px;
+    height: 300px;
+  }
+  .myinfo ul li {
+    height: 300px;
+  }
+  .myinfo ul li img {
+    width: 200px;
+    height: 300px;
+  }
+}
+
 /* 480px 이하 */
 @media screen and (max-width: 480px) {
-  body {
-    font-size: 9px;
+  .warp {
+    height: 2070px;
+  }
+  .img-slide img {
+    height: 200px;
+    object-fit: cover;
+  }
+  .tag-wrap {
+    width: 480px;
+  }
+  .contact-info {
+    height: 600px;
+  }
+  .contact-wrap ul li p {
+    font-size: 1.2rem;
+  }
+  .myinfo {
+    width: 480px;
+    height: 300px;
+  }
+  .myinfo ul li {
+    height: 300px;
+  }
+  .myinfo ul li img {
+    width: 150px;
+    height: 150px;
+  }
+  .myinfo ul li p {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
   }
 }

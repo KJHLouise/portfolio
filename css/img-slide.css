@@ -5,7 +5,7 @@
 } */
 .img-slide img {
   position: relative;
-  width: 1667px;
+  width: 100%;
   height: 600px;
   object-fit: cover;
 }
