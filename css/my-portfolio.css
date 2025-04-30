@@ -1,0 +1,192 @@
+.My-portfolio {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  gap: 40px;
+  padding: 50px 120px;
+  /* height: auto; */
+  /* min-height: 100vh; */
+  /* overflow-x: hidden; */
+}
+.tag-wrap {
+  display: grid;
+  width: 100%;
+  gap: 26px;
+  padding: 10px 30px;
+}
+.tag-wrap h2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 4.8rem;
+}
+.tag-box {
+  display: grid;
+  gap: 15px;
+}
+.tag {
+  display: grid;
+  grid-template-columns: 150px auto;
+  gap: 30px;
+  align-items: center;
+}
+.tag h5 {
+  font-size: 2.4rem;
+}
+.tag-list {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.tag-list li a {
+  border: 1px solid var(--tag-stroke);
+  padding: 5px 10px;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  color: var(--color);
+}
+.card-wrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px 30px;
+  min-height: 100%; /* ✅ 최소 높이를 12개 기준으로 고정 */
+  align-content: flex-start;
+  overflow-x: hidden;
+}
+.card {
+  position: relative;
+  width: 20%;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+.card.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  position: absolute;
+}
+.thumbnail {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 6 / 5;
+  overflow: hidden;
+  height: auto;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  margin-bottom: 12px;
+}
+.thumbnail:hover {
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
+  -ms-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  -o-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  transform: scale(110%);
+}
+.thumbnail a {
+  width: 100%;
+  height: 100%;
+}
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-tag {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.card-tag .tag-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.card-tag .tag-list li a {
+  border: 1px solid var(--tag-stroke);
+  padding: 2px 5px;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  color: var(--color);
+  display: block;
+}
+.text-wrap {
+  width: 100%;
+  height: 99px;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text-wrap span {
+  width: 100%;
+  height: 56px;
+  font-size: 1.9rem;
+  line-height: 28px; /* 줄 간격 조절 (가독성) */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 두 줄까지만 표시 */
+  -webkit-box-orient: vertical;
+  word-break: break-word; /* 단어가 길면 자동 줄바꿈 */
+  text-overflow: ellipsis; /* 넘치면 ... 표시 */
+  white-space: normal;
+}
+.text-wrap p {
+  font-size: 1.6rem;
+  color: var(--card-date);
+}
+.number {
+  position: relative;
+  width: 100%;
+}
+.number ul {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.number li:hover a {
+  background-color: var(--number-hovered);
+  color: var(--numberspan-default);
+}
+.number a {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: var(--number-defualt);
+  color: var(--numberspan-default);
+}
+.number li a.active {
+  background-color: var(--number-active);
+  color: var(--numberspan-active);
+}
+.tag-list > li.on > a {
+  background: var(--tag-on);
+  color: var(--color);
+  box-shadow: 0 5px 20px var(--tag-on);
+}

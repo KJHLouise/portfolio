@@ -1,0 +1,386 @@
+@media (min-width: 769px) {
+  .myinfo ul {
+    flex-direction: row; /* 💥 이거 반드시 필요 */
+  }
+}
+
+/* --- 1. 태블릿 세로 & 모바일 가로 (768px 이하) --- */
+
+@media (max-width: 768px) {
+  /* 기본 폰트 크기 조정 (선택 사항) */
+  html {
+    font-size: 9.5px;
+  }
+
+  /* 사이드바 숨기기 (JS로 토글 기능 필요) */
+  #sideBar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    width: 250px; /* 너비는 유지하거나 필요시 조정 */
+    background-color: var(--background); /* 배경색 추가 */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    z-index: 10; /* 헤더보다 위에 오도록 */
+    /* 활성화 시: #sideBar.active { transform: translateX(0); } */
+  }
+
+  /* 헤더 및 콘텐츠 영역 전체 너비 사용 */
+  .header,
+  .body-wrap {
+    left: 0;
+    width: 100%;
+    margin-left: 0; /* body-wrap의 margin-left 제거 */
+  }
+
+  /* 헤더 조정 */
+  .header {
+    padding: 8px 15px; /* 좌우 패딩 조정 (기존 20px에서 약간 줄임) */
+    display: grid; /* ✅ Flex 대신 Grid 사용 */
+    grid-template-columns: auto 1fr auto; /* 로고 | 검색(남는공간) | 토글 */
+    gap: 10px; /* ✅ 컬럼 사이 간격 */
+    align-items: center; /* 수직 가운데 정렬 */
+    /* justify-content: space-between; 제거 */
+  }
+  /* 헤더 로고/토글 크기 미세 조정 */
+  .logo i {
+    font-size: 2.8rem;
+  }
+  .logo a {
+    font-size: 1.4rem;
+  }
+  .toggle-body i {
+    font-size: 2rem;
+  }
+  #toggle-wrap {
+    width: 38px;
+    height: 22px;
+  }
+  #toggle-wrap .toggle {
+    width: 18px;
+    height: 18px;
+  }
+  #toggle-wrap.on .toggle {
+    transform: translateX(16px);
+  }
+
+  /* 검색창 스타일 조정 */
+  #search {
+    /* margin-left: auto; 제거 (Grid 사용 시 불필요) */
+    grid-column: 2 / 3; /* ✅ Grid의 두 번째 컬럼에 배치 */
+    display: flex; /* 내부 input을 가운데 정렬하기 위해 */
+    justify-content: center; /* ✅ 내부 input 가운데 정렬 */
+  }
+  #search input {
+    /* 기존 width, focus 스타일 유지 */
+    width: 40px;
+    padding-left: 30px;
+    cursor: pointer;
+    transition: width 0.5s ease;
+  }
+  #search input:focus {
+    width: 180px; /* 포커스 시 너비 조정 (필요시 값 변경) */
+    cursor: text;
+  }
+  /* 로고와 토글은 자동으로 1, 3번 컬럼에 배치됨 */
+  .logo {
+    grid-column: 1 / 2;
+  }
+  .toggle-body {
+    grid-column: 3 / 4;
+    justify-self: end; /* 토글 그룹을 오른쪽 끝으로 */
+  }
+
+  /* 이미지 슬라이드 높이 줄이기 */
+  .img-slide img,
+  .img-slide .swiper-slide {
+    height: 350px; /* 중간 높이로 조정 */
+  }
+
+  /* 포트폴리오 섹션 */
+  .My-portfolio {
+    padding: 30px 30px; /* 패딩 조정 */
+    gap: 30px; /* 섹션 내 간격 */
+  }
+  .tag-wrap {
+    padding: 0;
+    gap: 20px;
+  }
+  .tag-wrap h2 {
+    font-size: 3.6rem;
+  } /* 제목 크기 조정 */
+  .tag h5 {
+    font-size: 2rem;
+  }
+  .tag-list li a {
+    font-size: 1.5rem;
+  }
+
+  /* Tag 섹션 레이아웃 조정 (제목과 목록 세로 배치) */
+  .tag {
+    grid-template-columns: 1fr; /* 1열로 변경 */
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .tag h5 {
+    text-align: left;
+    margin-bottom: 8px;
+  }
+  .tag .tag-list {
+    justify-content: flex-start;
+  }
+
+  /* 포트폴리오 카드 2열 레이아웃 */
+  .card-wrap {
+    gap: 24px 20px; /* 카드 간격 조정 */
+  }
+  .card {
+    width: auto; /* 기존 width: 20% 무시 */
+    flex: 1 1 calc(50% - 10px); /* 2열 (gap 20px 고려) */
+    min-width: 240px; /* 최소 너비 조정 */
+    /* ... 기타 카드 스타일 */
+  }
+  /* 카드 내부 텍스트 조정 */
+  .text-wrap {
+    height: auto;
+    gap: 10px;
+  }
+  .text-wrap span {
+    font-size: 1.7rem;
+    line-height: 1.5;
+    height: auto;
+    -webkit-line-clamp: 3; /* 3줄 제한 */
+  }
+  .text-wrap p {
+    font-size: 1.4rem;
+  }
+  .card-tag {
+    height: auto;
+  }
+
+  /* 페이지네이션 버튼 */
+  .number ul {
+    gap: 15px;
+  }
+  .number a {
+    width: 35px;
+    height: 35px;
+  }
+
+  /* Contact 섹션 */
+  .contact-wrap ul {
+    gap: 35px;
+  }
+  .contact-wrap ul li h2 {
+    font-size: 3.6rem;
+  }
+  .contact-wrap ul li p {
+    font-size: 3.2rem;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  /* Contact myinfo 세로 배치 */
+  .myinfo {
+    width: 90%;
+    max-width: 600px; /* 최대 너비 조정 */
+    height: auto;
+  }
+  .myinfo ul {
+    flex-direction: column; /* ✅ 세로로 정렬 */
+    height: auto;
+    padding: 0;
+  }
+  .myinfo ul li {
+    width: 100%;
+    height: auto;
+    padding: 15px 10px;
+  }
+  .myinfo ul li:last-child {
+    text-align: center;
+  }
+  .myinfo ul li img {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 10px;
+  }
+  .myinfo ul li p {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .info-wrap ul {
+    gap: 18px;
+  }
+  .info-wrap ul li {
+    font-size: 1.6rem;
+  }
+
+  /* Footer */
+  .footer {
+    height: auto;
+    padding: 35px 15px;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* --- 2. 모바일 세로 (480px 이하) --- */
+@media (max-width: 480px) {
+  /* html { font-size: 10px; } /* 폰트 크기 재조정 필요시 */
+  */
+
+  /* 헤더 패딩 등 미세 조정 */
+  .header {
+    gap: 5px; /* 더 작은 화면에서 간격 줄이기 */
+    padding: 8px 10px;
+  }
+  .logo i {
+    font-size: 2.6rem;
+  }
+  .logo a {
+    font-size: 1.3rem; /* 또는 display: none; */
+  }
+
+  /* 검색창 더 작게 또는 숨기기 */
+  #search input {
+    max-width: 100px; /* 포커스 시 최대 너비 */
+    padding-left: 28px; /* 아이콘 공간 */
+    font-size: 1.1rem; /* 내부 폰트 */
+  }
+  #search input:focus {
+    width: 120px; /* 더 작은 화면에서 포커스 너비 제한 */
+  }
+
+  /* 토글 아이콘/버튼 크기 */
+  .toggle-body i {
+    font-size: 1.8rem;
+  }
+  #toggle-wrap {
+    width: 34px;
+    height: 20px;
+  }
+  #toggle-wrap .toggle {
+    width: 16px;
+    height: 16px;
+  }
+  #toggle-wrap.on .toggle {
+    transform: translateX(14px);
+  }
+
+  /* 이미지 슬라이드 높이 더 줄이기 */
+  .img-slide img,
+  .img-slide .swiper-slide {
+    height: 220px;
+  }
+
+  /* 포트폴리오 섹션 */
+  .My-portfolio {
+    padding: 25px 15px;
+    gap: 25px;
+  }
+  .tag-wrap h2 {
+    font-size: 3rem;
+  }
+  .tag h5 {
+    font-size: 1.8rem;
+  }
+  .tag-list {
+    gap: 8px;
+  } /* 태그 간격 */
+  .tag-list li a {
+    font-size: 1.3rem;
+    padding: 4px 8px;
+  }
+
+  /* 포트폴리오 카드 1열 강제 */
+  .card {
+    flex-basis: 100%;
+    min-width: unset;
+  }
+  .card-wrap {
+    gap: 15px;
+  }
+
+  /* 카드 내부 텍스트/태그 크기 조정 */
+  .thumbnail {
+    margin-bottom: 8px;
+  } /* 썸네일 아래 간격 */
+  .text-wrap {
+    gap: 8px;
+  }
+  .text-wrap span {
+    font-size: 1.5rem;
+    -webkit-line-clamp: 2; /* 2줄 제한 */
+    line-height: 1.4;
+  }
+  .text-wrap p {
+    font-size: 1.2rem;
+  }
+  .card-tag {
+    margin-bottom: 5px;
+  }
+  .card-tag .tag-list {
+    gap: 4px;
+  }
+  .card-tag .tag-list li a {
+    font-size: 1rem;
+    padding: 1px 4px;
+  }
+
+  /* 페이지네이션 버튼 */
+  .number ul {
+    gap: 8px;
+  }
+  .number a {
+    width: 28px;
+    height: 28px;
+    font-size: 1.3rem;
+  }
+
+  /* Contact 섹션 */
+  .contact-wrap ul {
+    gap: 25px;
+  }
+  .contact-wrap ul li h2 {
+    font-size: 3rem;
+  }
+  .contact-wrap ul li p {
+    font-size: 2rem;
+    padding: 0 10px;
+  }
+  .myinfo {
+    width: 95%;
+    padding: 10px;
+  }
+  .myinfo ul {
+    flex-direction: column; /* ✅ 모바일에선 세로 배치 유지 */
+  }
+  .myinfo ul li {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .myinfo ul li:last-child {
+    text-align: center; /* ✅ 480px 이하 이미지 li 정렬 */
+  }
+  .myinfo ul li p {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .myinfo ul li img {
+    width: 120px;
+    height: 120px;
+  }
+  .info-wrap ul {
+    gap: 12px;
+  }
+  .info-wrap ul li {
+    font-size: 1.4rem;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 25px 15px;
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-size: 10px;
+  color: #666;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: #666;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+.wrap {
+  position: relative;
+  width: 100%;
+  background-color: var(--background);
+  color: var(--color);
+}
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: opacity 0.5s ease;
+}
+
+.loadingImg {
+  width: 100vw; /* 가로 화면 크기에 맞춤 */
+  height: 100vh; /* 세로 화면 크기에 맞춤 */
+  object-fit: cover; /* 비율 유지하면서 꽉 채우기 */
+}
+
+.loading.hidden {
+  opacity: 0;
+  pointer-events: none;
+}

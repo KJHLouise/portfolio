@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 웹페이지 설명 -->
+    <meta
+      name="description"
+      content="Louise의 포트폴리오 웹사이트입니다. 반응형 웹 디자인, 웹 퍼블리싱, 영상 편집 등 다양한 작업물을 확인하실 수 있습니다."
+    />
+    <!-- 웹페이지와 관련된 키워드를 정의 -->
+    <meta
+      name="keywords"
+      content="반응형, 웹퍼블리싱, 웹퍼블리셔, 영상, 멀티미디어, 영상편집, 포트폴리오, 웹디자인, 다크모드"
+    />
+    <!-- 검색 엔진 크롤링 설정 -->
+    <meta name="robots" content="index, follow" />
+    <!-- canonical URL -->
+    <link rel="canonical" href="https://portfolio-kjhlouise.vercel.app/" />
+    <!-- 소셜 미디어에서 페이지가 공유될 때 사용되는 제목 (미리보기 이미지  권장사이즈 : )-->
+    <meta property="og:title" content="Louise의 포트폴리오 웹사이트" />
+    <!-- 소셜 미디어에서 페이지가 공유될 때 표시되는 사이트 이름 -->
+    <meta property="og:site_name" content="Louise의 웹사이트" />
+    <!-- 소셜 미디어에서 페이지가 웹사이트임을 명시 -->
+    <meta property="og:type" content="website" />
+    <!-- Open Graph 프로토콜에서 사용되는 메타 태그의 속성 중 하나로, 페이지의 간략한 설명을 제공하는 데 사용 -->
+    <!-- 소셜 미디어에서 공유될 때 사용되는 URL -->
+    <meta property="og:url" content="https://portfolio-kjhlouise.vercel.app/" />
+    <!-- 소셜 미디어에서 페이지가 공유될 때 표시되는 이미지 -->
+    <meta property="og:image" content="img/home-page-screenshot1.png" />
+    <!-- 소셜 미디어에서 페이지가 공유될 때 사용되는 설명 -->
+    <meta
+      property="og:description"
+      content="Andrew의 포트폴리오 웹사이트입니다. 반응형 웹 디자인, 웹 퍼블리싱, 영상 편집 등 다양한 작업물을 확인하실 수 있습니다."
+    />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="img/home-page-screenshot1.png" />
+    <meta name="twitter:title" content="Louise의 포트폴리오 웹사이트" />
+    <meta
+      name="twitter:description"
+      content="Louise의 포트폴리오 웹사이트입니다. 반응형 웹 디자인, 웹 퍼블리싱, 영상 편집 등 다양한 작업물을 확인하실 수 있습니다."
+    />
+    <meta name="twitter:image" content="img/home-page-screenshot1.png" />
+    <title>potfolio</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/side-bar.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/body-wrap.css" />
+    <link rel="stylesheet" href="css/img-slide.css" />
+    <link rel="stylesheet" href="css/my-portfolio.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://kit.fontawesome.com/befbfbef1e.js" crossorigin="anonymous"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <!-- Swiper library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <!-- 로딩 화면 -->
+    <div class="loading">
+      <img class="loadingImg" src="/img/loading.gif" />
+    </div>
+    <div class="wrap section" id="menu01">
+      <div id="sideBar">
+        <div class="img-myself">
+          <img src="img/img-myself.png" alt="myself" />
+        </div>
+        <nav class="sideBar__nav">
+          <ul class="sideBar__menu">
+            <li class="sideBar__item">
+              <a href="#menu01" class="sideBar__link" data-link="#menu01">
+                <i class="fa-solid fa-house"></i>
+                <span>HOME</span>
+              </a>
+            </li>
+            <li class="sideBar__item">
+              <a href="#menu02" class="sideBar__link" data-link="#menu02">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>PORTFOLIO</span>
+              </a>
+            </li>
+            <li class="sideBar__item">
+              <a href="#menu03" class="sideBar__link" data-link="#menu03">
+                <i class="fa-solid fa-envelope"></i>
+                <span>CONTACT</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header">
+        <div class="logo">
+          <i class="fa-solid fa-clover"></i>
+          <a href="#">LEAF</a>
+        </div>
+        <form method="get" action="/search" id="search">
+          <input name="q" type="text" size="40" placeholder="Search..." />
+        </form>
+        <div class="toggle-body">
+          <i class="fa-regular fa-sun dark-mode"></i>
+          <i class="fa-solid fa-sun light-mode"></i>
+          <div id="toggle-wrap">
+            <div class="toggle"></div>
+          </div>
+          <i class="fa-regular fa-moon light-mode"></i>
+          <i class="fa-solid fa-moon dark-mode"></i>
+        </div>
+      </div>
+      <div class="body-wrap">
+        <!-- swiper -->
+        <div class="img-slide">
+          <div class="swiper slide-list">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a
+                  href="https://drive.google.com/file/d/1g0lGmQeqhog5HK6QtHNISs0pMsPX7-s6/view?usp=drive_link"
+                  target="_blank"
+                >
+                  <img src="img/BLACKPINK.PNG" alt="이미지-1" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" target="_blank">
+                  <img src="https://picsum.photos/1667/600?random=2" alt="이미지-2" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" target="_blank">
+                  <img src="https://picsum.photos/1667/600?random=3" alt="이미지-3" />
+                </a>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+        <div class="My-portfolio section" id="menu02">
+          <div class="tag-wrap">
+            <h2>My Portfolio</h2>
+            <div class="tag-box">
+              <div class="tag">
+                <h5>Since</h5>
+                <ul class="tag-list">
+                  <li><a href="#">2024</a></li>
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">2026</a></li>
+                </ul>
+              </div>
+              <div class="tag">
+                <h5>Category</h5>
+                <ul class="tag-list">
+                  <li><a href="#" class="on">전체</a></li>
+                  <li><a href="#">영상편집</a></li>
+                  <li><a href="#">광고</a></li>
+                  <li><a href="#">타이포그래피</a></li>
+                  <li><a href="#">3D</a></li>
+                  <li><a href="#">캐릭터</a></li>
+                  <li><a href="#">인터뷰</a></li>
+                  <li><a href="#">홈페이지</a></li>
+                  <li><a href="#">웹디자인</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                </ul>
+              </div>
+              <div class="tag">
+                <h5>Main Tool</h5>
+                <ul class="tag-list">
+                  <li><a href="#">에프터이펙트</a></li>
+                  <li><a href="#">프리미어프로</a></li>
+                  <li><a href="#">촬영</a></li>
+                  <li><a href="#">Visual Studio Code</a></li>
+                  <li><a href="#">피그마</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card">
+              <div class="thumbnail">
+                <a
+                  href="https://drive.google.com/file/d/10fKcLmU80xtMEjgNhA088rIm4HVKU3Ud/view?usp=sharing"
+                  target="_blank"
+                >
+                  <img src="img/Path Animation.PNG" alt="이미지"
+                /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">영상편집</a></li>
+                  <li><a href="#">에프터이펙트</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quidem quaerat,
+                  iusto odio hic excepturi obcaecati saepe tenetur aperiam asperiores dolor facilis
+                  illum possimus vitae harum et, vel, recusandae voluptates.</span
+                >
+                <p>2025. 02. 11.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a
+                  href="https://drive.google.com/file/d/1HFo9Bo-98uGyIy6ZOakhIbP6QzxjWVDq/view"
+                  target="_blank"
+                >
+                  <img src="img/01_Killing Voice.PNG" alt="이미지"
+                /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">영상편집</a></li>
+                  <li><a href="#">에프터이펙트</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quidem quaerat,
+                  iusto odio hic excepturi obcaecati saepe tenetur aperiam asperiores dolor facilis
+                  illum possimus vitae harum et, vel, recusandae voluptates.</span
+                >
+                <p>2025. 02. 03.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a
+                  href="https://drive.google.com/file/d/1u9sT8SWlWbotTYjaE7DLObtOxDeg7qMW/view"
+                  target="_blank"
+                >
+                  <img src="img/02_Killing Voice.PNG" alt="이미지"
+                /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">영상편집</a></li>
+                  <li><a href="#">에프터이펙트</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quidem quaerat,
+                  iusto odio hic excepturi obcaecati saepe tenetur aperiam asperiores dolor facilis
+                  illum possimus vitae harum et, vel, recusandae voluptates.</span
+                >
+                <p>2025. 02. 03.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a
+                  href="https://drive.google.com/file/d/143V-i2p6Xbiy4THv6sqSZrhOTN5FmYmV/view"
+                  target="_blank"
+                >
+                  <img src="img/100s Live.PNG" alt="이미지"
+                /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">영상편집</a></li>
+                  <li><a href="#">에프터이펙트</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quidem quaerat,
+                  iusto odio hic excepturi obcaecati saepe tenetur aperiam asperiores dolor facilis
+                  illum possimus vitae harum et, vel, recusandae voluptates.</span
+                >
+                <p>2025. 02. 06.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a
+                  href="https://drive.google.com/file/d/15tFp9KjavkZLFwbaF1ifkT2VmNq52vH4/view"
+                  target="_blank"
+                >
+                  <img src="img/MOVE-REC.png" alt="이미지"
+                /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">영상편집</a></li>
+                  <li><a href="#">에프터이펙트</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quidem quaerat,
+                  iusto odio hic excepturi obcaecati saepe tenetur aperiam asperiores dolor facilis
+                  illum possimus vitae harum et, vel, recusandae voluptates.</span
+                >
+                <p>2025. 02. 10.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a
+                  href="https://drive.google.com/file/d/1eTZIXgdwO04FoEv7I-J5FY31LBdsiefk/view"
+                  target="_blank"
+                >
+                  <img src="img/YTN.PNG" alt="이미지"
+                /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">영상편집</a></li>
+                  <li><a href="#">에프터이펙트</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quidem quaerat,
+                  iusto odio hic excepturi obcaecati saepe tenetur aperiam asperiores dolor facilis
+                  illum possimus vitae harum et, vel, recusandae voluptates.</span
+                >
+                <p>2025. 02. 04.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a
+                  href="https://drive.google.com/file/d/1g0lGmQeqhog5HK6QtHNISs0pMsPX7-s6/view"
+                  target="_blank"
+                >
+                  <img src="img/BLACKPINK-CARD.png" alt="이미지"
+                /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">타이포그래피</a></li>
+                  <li><a href="#">영상편집</a></li>
+                  <li><a href="#">에프터이펙트</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span
+                  >BLACKPINK - PINK VENOM 타이포 그래피 작품입니다. 초반 영상은 카피작품이며,
+                  후반영상은 제 창작이 들어간 작품입니다. 첫 작업물인것을 감안하고 시청해주시면
+                  감사하겠습니다.
+                </span>
+                <p>2025. 03. 27.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a href="#" target="_blank"><img src="img/card-1.png" alt="이미지" /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">영상편집</a></li>
+                  <li><a href="#">프리미어프로</a></li>
+                  <li><a href="#">에프터이펙트</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quidem quaerat,
+                  iusto odio hic excepturi obcaecati saepe tenetur aperiam asperiores dolor facilis
+                  illum possimus vitae harum et, vel, recusandae voluptates.</span
+                >
+                <p>2025.03.20.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a href="#" target="_blank"><img src="img/A-1.PNG" alt="이미지" /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">Visual Studio Code</a></li>
+                  <li><a href="#">웹디자인</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span>웹디자인 개발 기능사 A-1</span>
+                <p>2025.03.20.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a href="#" target="_blank"><img src="img/A-2.PNG" alt="이미지" /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">Visual Studio Code</a></li>
+                  <li><a href="#">웹디자인</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span>웹디자인 개발 기능사 A-2</span>
+                <p>2025.03.20.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a href="#" target="_blank"><img src="img/A-3.PNG" alt="이미지" /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">Visual Studio Code</a></li>
+                  <li><a href="#">웹디자인</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span>웹디자인 개발 기능사 A-3</span>
+                <p>2025.03.20.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a href="#" target="_blank"><img src="img/A-4.PNG" alt="이미지" /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">Visual Studio Code</a></li>
+                  <li><a href="#">웹디자인</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span>웹디자인 개발 기능사 A-4</span>
+                <p>2025.03.20.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a href="#" target="_blank"><img src="img/B-1.PNG" alt="이미지" /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">Visual Studio Code</a></li>
+                  <li><a href="#">웹디자인</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span>웹디자인 개발 기능사 B-1</span>
+                <p>2025.03.20.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a href="#" target="_blank"><img src="img/B-2.PNG" alt="이미지" /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">Visual Studio Code</a></li>
+                  <li><a href="#">웹디자인</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span>웹디자인 개발 기능사 B-2</span>
+                <p>2025.03.20.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a href="#" target="_blank"><img src="img/B-3.PNG" alt="이미지" /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">Visual Studio Code</a></li>
+                  <li><a href="#">웹디자인</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span>웹디자인 개발 기능사 B-3</span>
+                <p>2025.03.20.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a href="#" target="_blank"><img src="img/B-4.PNG" alt="이미지" /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">Visual Studio Code</a></li>
+                  <li><a href="#">웹디자인</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span>웹디자인 개발 기능사 B-4</span>
+                <p>2025.03.20.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a href="#" target="_blank"><img src="img/C-1.PNG" alt="이미지" /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">Visual Studio Code</a></li>
+                  <li><a href="#">웹디자인</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span>웹디자인 개발 기능사 C-1</span>
+                <p>2025.03.20.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a href="#" target="_blank"><img src="img/C-2.PNG" alt="이미지" /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">Visual Studio Code</a></li>
+                  <li><a href="#">웹디자인</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span>웹디자인 개발 기능사 C-2</span>
+                <p>2025.03.20.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a href="#" target="_blank"><img src="img/C-3.PNG" alt="이미지" /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">Visual Studio Code</a></li>
+                  <li><a href="#">웹디자인</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span>웹디자인 개발 기능사 C-3</span>
+                <p>2025.03.20.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a href="#" target="_blank"><img src="img/C-4.PNG" alt="이미지" /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">Visual Studio Code</a></li>
+                  <li><a href="#">웹디자인</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span>웹디자인 개발 기능사 C-4</span>
+                <p>2025.03.20.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a href="#" target="_blank"><img src="img/D-1.PNG" alt="이미지" /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">Visual Studio Code</a></li>
+                  <li><a href="#">웹디자인</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span>웹디자인 개발 기능사 D-1</span>
+                <p>2025.03.20.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a href="#" target="_blank"><img src="img/D-2.PNG" alt="이미지" /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">Visual Studio Code</a></li>
+                  <li><a href="#">웹디자인</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span>웹디자인 개발 기능사 D-2</span>
+                <p>2025.03.20.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a href="#" target="_blank"><img src="img/D-3.PNG" alt="이미지" /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">Visual Studio Code</a></li>
+                  <li><a href="#">웹디자인</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span>웹디자인 개발 기능사 D-3</span>
+                <p>2025.03.20.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a href="#" target="_blank"><img src="img/D-4.PNG" alt="이미지" /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">Visual Studio Code</a></li>
+                  <li><a href="#">웹디자인</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span>웹디자인 개발 기능사 D-4</span>
+                <p>2025.03.20.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a href="#" target="_blank"><img src="img/E-1.PNG" alt="이미지" /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">Visual Studio Code</a></li>
+                  <li><a href="#">프리미어프로</a></li>
+                  <li><a href="#">웹디자인</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span>웹디자인 개발 기능사 E-1</span>
+                <p>2025.03.20.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a href="#" target="_blank"><img src="img/E-2.PNG" alt="이미지" /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">Visual Studio Code</a></li>
+                  <li><a href="#">웹디자인</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span>웹디자인 개발 기능사 E-2</span>
+                <p>2025.03.20.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a href="#" target="_blank"><img src="img/E-3.PNG" alt="이미지" /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">Visual Studio Code</a></li>
+                  <li><a href="#">웹디자인</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span>웹디자인 개발 기능사 E-3</span>
+                <p>2025.03.20.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a href="#" target="_blank"><img src="img/E-4.PNG" alt="이미지" /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">Visual Studio Code</a></li>
+                  <li><a href="#">웹디자인</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span>웹디자인 개발 기능사 E-4</span>
+                <p>2025.03.20.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a href="#" target="_blank"><img src="img/F-1.PNG" alt="이미지" /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">Visual Studio Code</a></li>
+                  <li><a href="#">웹디자인</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span>웹디자인 개발 기능사 F-1</span>
+                <p>2025.03.20.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a href="#" target="_blank"><img src="img/F-2.PNG" alt="이미지" /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">Visual Studio Code</a></li>
+                  <li><a href="#">웹디자인</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span>웹디자인 개발 기능사 F-2</span>
+                <p>2025.03.20.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a href="#" target="_blank"><img src="img/F-3.PNG" alt="이미지" /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">Visual Studio Code</a></li>
+                  <li><a href="#">웹디자인</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span>웹디자인 개발 기능사 F-3</span>
+                <p>2025.03.20.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumbnail">
+                <a href="#" target="_blank"><img src="img/F-4.PNG" alt="이미지" /></a>
+              </div>
+              <div class="card-tag">
+                <ol class="tag-list">
+                  <li><a href="#">2025</a></li>
+                  <li><a href="#">전체</a></li>
+                  <li><a href="#">Visual Studio Code</a></li>
+                  <li><a href="#">웹디자인</a></li>
+                  <li><a href="#">UI/UX</a></li>
+                </ol>
+              </div>
+              <div class="text-wrap">
+                <span>웹디자인 개발 기능사 F-4</span>
+                <p>2025.03.20.</p>
+              </div>
+            </div>
+          </div>
+          <div class="number">
+            <ul id="pagination"></ul>
+          </div>
+        </div>
+        <div class="contact-info section" id="menu03">
+          <ul>
+            <li class="contact-wrap">
+              <ul>
+                <li><h2>Contact</h2></li>
+                <li>
+                  <p>
+                    영상 편집, 웹콘텐츠 제작에 있어 트렌드를 반영하는 영상편집자, 웹디자이너가
+                    되겠습니다.
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li class="myinfo">
+              <ul>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus mollitia in
+                    vero quos dolore inventore asperiores harum quidem laborum! Beatae dicta,
+                    dignissimos quam nam modi qui dolore nostrum nisi cupiditate?
+                  </p>
+                </li>
+                <li><img src="img/img-myself.png" alt="myself" /></li>
+              </ul>
+            </li>
+            <li class="info-wrap">
+              <ul>
+                <li><p>name : 김재환</p></li>
+                <li><p>e-mail : jaehwankim30@naver.com</p></li>
+                <li>
+                  <p>
+                    <a href="https://portfolio-kjhlouise.vercel.app/"
+                      >portfolio : portfolio-kjhlouise.vercel.app</a
+                    >
+                  </p>
+                </li>
+                <li>
+                  <a href="https://open.kakao.com/o/s3RJej7g" target="_blank"
+                    >Go To Open Kakao Talk</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>©portfolio-kjhlouise.vercel.app All rights reserved.</p>
+    </div>
+  </body>
+</html>

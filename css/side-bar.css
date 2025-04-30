@@ -1,0 +1,42 @@
+#sideBar {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  padding: 32px 16px 16px;
+  z-index: 2;
+}
+.img-myself {
+  position: relative;
+  margin: 0 0 30px;
+}
+.sideBar__menu {
+  position: relative;
+}
+.sideBar__menu i {
+  font-size: 2.4rem;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sideBar__menu span {
+  font-size: 1.6rem;
+  align-items: center;
+}
+.sideBar__item {
+  position: relative;
+  margin: 0 0 35px;
+  display: flex;
+  justify-content: flex-start;
+}
+.sideBar__menu a {
+  color: var(--sidebar-default);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sideBar__link.active {
+  color: var(--sidebar-active);
+  font-weight: bold;
+}
