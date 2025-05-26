@@ -1,4 +1,18 @@
 window.addEventListener("load", () => {
+  // img-slide
+  const slideList = new Swiper(".slide-list", {
+    speed: 1000,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
   // 로딩 창
   setTimeout(function () {
     document.documentElement.style.overflow = "auto"; // 스크롤 활성화
@@ -236,20 +250,6 @@ window.addEventListener("load", () => {
         showPage(currentPage); // 첫 페이지로 초기화 (선택사항)
       }
     }, 200);
-
-    // img-slide
-    const slideList = new Swiper(".slide-list", {
-      speed: 1000,
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
 
     // swiper mouseover event
     const autoPlay = document.querySelector(".slide-list");
