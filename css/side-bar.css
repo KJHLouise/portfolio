@@ -9,6 +9,10 @@
   position: relative;
   margin: 0 0 30px;
 }
+.img-myself img {
+  width: 100px;
+  height: 100px;
+}
 .sideBar__menu {
   position: relative;
 }
