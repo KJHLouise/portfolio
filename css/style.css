@@ -94,6 +94,9 @@
   .img-slide .swiper-slide {
     height: 350px; /* 중간 높이로 조정 */
   }
+  .youtube-thumbnail .play-button {
+    top: 25%;
+  }
 
   /* 포트폴리오 섹션 */
   .My-portfolio {
