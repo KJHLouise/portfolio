@@ -58,7 +58,7 @@
     <!-- Swiper library -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
   </head>
   <body>
     <!-- 로딩 화면 -->
@@ -117,25 +117,24 @@
           <div class="swiper slide-list">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <a
-                  href="https://drive.google.com/file/d/14viTtGUvh-kZO0K5gdCeOGG_buEuR1ET/view?usp=sharing"
-                  target="_blank"
-                >
-                  <img src="img/interview.png" alt="이미지-3" />
-                </a>
+                <div class="swiper-slide">
+                  <div class="youtube-thumbnail" data-id="mN31bCqn88I" onclick="loadYouTube(this)">
+                    <img src="img/interview.png" alt="썸네일" />
+                    <div class="play-button"></div>
+                  </div>
+                </div>
               </div>
               <div class="swiper-slide">
-                <a href="https://advertising-wine.vercel.app/" target="_blank">
-                  <img src="img/advertising_1 (1).gif" alt="광고영상" />
-                </a>
+                <div class="youtube-thumbnail" data-id="FmenMi-swMU" onclick="loadYouTube(this)">
+                  <img src="img/advertising_1 (1).gif" alt="썸네일" />
+                  <div class="play-button"></div>
+                </div>
               </div>
               <div class="swiper-slide">
-                <a
-                  href="https://drive.google.com/file/d/1g0lGmQeqhog5HK6QtHNISs0pMsPX7-s6/view?usp=drive_link"
-                  target="_blank"
-                >
-                  <img src="img/BLACKPINK.PNG" alt="이미지-1" />
-                </a>
+                <div class="youtube-thumbnail" data-id="TBBMo30heiE" onclick="loadYouTube(this)">
+                  <img src="img/BLACKPINK.PNG" alt="썸네일" />
+                  <div class="play-button"></div>
+                </div>
               </div>
             </div>
             <div class="swiper-button-next"></div>

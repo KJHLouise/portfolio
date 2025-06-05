@@ -1,15 +1,30 @@
+let slideList; // 밖에서 선언
+
 window.addEventListener("load", () => {
   // img-slide
-  const slideList = new Swiper(".slide-list", {
+  slideList = new Swiper(".slide-list", {
     speed: 1000,
     loop: true,
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
+      pauseOnMouseEnter: true,
     },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+    on: {
+      slideChange: function () {
+        // 현재 문서 내 모든 iframe(Youtube) 찾아서 정지 명령 전달
+        const iframes = document.querySelectorAll(".swiper-slide iframe");
+        iframes.forEach((iframe) => {
+          iframe.contentWindow.postMessage(
+            '{"event":"command","func":"pauseVideo","args":""}',
+            "*"
+          );
+        });
+      },
     },
   });
 
@@ -286,3 +301,51 @@ window.addEventListener("load", () => {
     });
   });
 });
+window.loadYouTube = function (wrapper) {
+  const videoId = wrapper.dataset.id;
+
+  // iframe 생성
+  wrapper.innerHTML = `
+    <iframe width="100%" height="600" 
+      src="https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&enablejsapi=1" 
+      title="YouTube video"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      id="yt-${videoId}">
+    </iframe>`;
+
+  // iframe이 로드될 때 플레이어 상태 감지 설정
+  setTimeout(() => {
+    const iframe = document.getElementById(`yt-${videoId}`);
+    if (!iframe) return;
+
+    // 상태 변화 수신 핸들러 추가
+    window.onYouTubeIframeAPIReady = function () {
+      const player = new YT.Player(iframe, {
+        events: {
+          onStateChange: function (event) {
+            if (event.data === YT.PlayerState.PLAYING) {
+              slideList.autoplay.stop();
+            } else if (
+              event.data === YT.PlayerState.PAUSED ||
+              event.data === YT.PlayerState.ENDED
+            ) {
+              slideList.autoplay.start();
+            }
+          },
+        },
+      });
+    };
+
+    // 유튜브 API 스크립트 로드 (중복 로딩 방지)
+    if (!document.querySelector("script#youtube-api")) {
+      const tag = document.createElement("script");
+      tag.src = "https://www.youtube.com/iframe_api";
+      tag.id = "youtube-api";
+      document.body.appendChild(tag);
+    } else if (window.YT && window.YT.Player) {
+      window.onYouTubeIframeAPIReady(); // 이미 로드된 경우 즉시 실행
+    }
+  }, 100); // iframe 로딩 약간 대기
+};
