@@ -12,6 +12,7 @@
 .img-myself img {
   width: 100px;
   height: 100px;
+  object-fit: contain;
 }
 .sideBar__menu {
   position: relative;
