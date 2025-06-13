@@ -34,7 +34,7 @@
 .myinfo {
   position: relative;
   width: 1200px;
-  height: 400px;
+  height: 100%;
 }
 .myinfo ul {
   position: relative;
@@ -49,19 +49,29 @@
 }
 .myinfo ul li {
   position: relative;
-  width: 50%;
+  width: 75%;
   height: 100%;
-  padding: 30px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .myinfo ul li p {
-  text-align: center;
+  text-align: left;
+  max-width: 700px;
   font-weight: bold;
   font-size: 1.5rem;
   line-height: 2.5rem;
+  white-space: pre-line;
+  box-sizing: border-box;
 }
+/* .myinfo ul li p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 2.8rem; 
+  white-space: pre-line; 
+} */
 .myinfo ul li img {
   width: 300px;
   height: 300px;

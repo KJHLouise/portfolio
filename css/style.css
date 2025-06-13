@@ -207,7 +207,7 @@
   }
   .myinfo ul li p {
     font-size: 1.6rem;
-    text-align: center;
+    text-align: left;
   }
 
   .info-wrap ul {
@@ -368,7 +368,7 @@
   }
   .myinfo ul li p {
     font-size: 1.4rem;
-    text-align: center;
+    text-align: left;
   }
   .myinfo ul li img {
     width: 120px;
